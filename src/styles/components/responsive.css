@@ -1,0 +1,33 @@
+/* Responsive */
+@media (max-width: 600px) {
+  .app {
+    padding: 48px 16px 80px;
+  }
+
+  .header h1 {
+    font-size: 36px;
+  }
+
+  .input-row {
+    flex-wrap: wrap;
+  }
+
+  .input-row input[type="text"] {
+    width: 100%;
+  }
+
+  .priority-selector {
+    order: 3;
+  }
+
+  .btn-add {
+    order: 4;
+    flex: 1;
+    text-align: center;
+  }
+
+  .sidebar-indicator {
+    left: 6px;
+    width: 6px;
+  }
+}

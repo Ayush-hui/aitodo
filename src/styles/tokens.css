@@ -1,0 +1,20 @@
+:root {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --surface-hover: #1a1a1a;
+  --border: #1e1e1e;
+  --border-hover: #333333;
+  --text: #ededed;
+  --text-secondary: #999999;
+  --text-muted: #555555;
+  --danger-hover: #e44;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --transition: 0.2s ease;
+  --priority-high: #ef4444;
+  --priority-med: #f59e0b;
+  --priority-low: #3b82f6;
+  --priority-high-bg: rgba(239, 68, 68, 0.1);
+  --priority-med-bg: rgba(245, 158, 11, 0.1);
+  --priority-low-bg: rgba(59, 130, 246, 0.1);
+}

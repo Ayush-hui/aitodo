@@ -1,0 +1,153 @@
+/* Task List */
+.task-list {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 6px;
+  background: var(--surface);
+  transition: border-color var(--transition), background var(--transition), opacity 0.15s ease;
+}
+
+.task-item:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+}
+
+.task-item.completed .task-text {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+/* Priority Dot */
+.priority-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.priority-dot.high { background: var(--priority-high); }
+.priority-dot.medium { background: var(--priority-med); }
+.priority-dot.low { background: var(--priority-low); }
+
+/* Checkbox */
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--border-hover);
+  border-radius: 5px;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.checkbox:hover {
+  border-color: var(--text-muted);
+}
+
+.checkbox.checked {
+  background: var(--text);
+  border-color: var(--text);
+}
+
+.checkbox.checked svg {
+  display: block;
+}
+
+.checkbox svg {
+  display: none;
+  width: 10px;
+  height: 10px;
+}
+
+/* Task Text */
+.task-text {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text);
+  word-break: break-word;
+  transition: color var(--transition);
+}
+
+/* Inline Edit */
+.edit-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.task-edit-input {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--border-hover);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 14px;
+  color: var(--text);
+  outline: none;
+  font-family: inherit;
+}
+
+.edit-row .priority-selector {
+  flex-shrink: 0;
+}
+
+.edit-row .priority-pill {
+  padding: 4px 8px;
+  font-size: 11px;
+}
+
+/* Task Actions */
+.task-actions {
+  display: flex;
+  gap: 2px;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.task-item:hover .task-actions {
+  opacity: 1;
+}
+
+/* hide actions when editing */
+.task-item.editing .task-actions {
+  display: none;
+}
+
+.btn-icon {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition), background var(--transition);
+}
+
+.btn-icon:hover {
+  color: var(--text);
+  background: var(--surface-hover);
+}
+
+.btn-icon.delete:hover {
+  color: var(--danger-hover);
+}
+
+.btn-icon svg {
+  width: 15px;
+  height: 15px;
+}

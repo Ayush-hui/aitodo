@@ -1,0 +1,48 @@
+/* Section Headers (HIGH / MEDIUM / LOW) */
+.section-header {
+  padding: 16px 0 6px 2px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-header::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.section-header.high { color: var(--priority-high); }
+.section-header.medium { color: var(--priority-med); }
+.section-header.low { color: var(--priority-low); }
+
+/* Count & Footer */
+.footer {
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 64px 0 48px;
+}
+
+.empty-state p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.empty-state p:first-child {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}

@@ -1,0 +1,65 @@
+/* 8-Bit Progress Bar */
+.progress-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.progress-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.progress-bar-outer {
+  /* 8-bit: no border-radius, sharp pixel edges */
+  background: #1a1a1a;
+  border: 2px solid var(--border);
+  height: 20px;
+  position: relative;
+  /* Pixel-style step effect via image-rendering on inner fill */
+  image-rendering: pixelated;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--text-secondary);
+  transition: width 0.4s steps(20, end);
+  position: relative;
+  /* Scanline texture for retro feel */
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0,0,0,0.15) 3px,
+    rgba(0,0,0,0.15) 4px
+  );
+  background-color: var(--text-secondary);
+}
+
+.progress-bar-fill.complete {
+  background-color: #34d399;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.progress-percent {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.progress-fraction {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+}

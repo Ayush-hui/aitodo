@@ -1,0 +1,91 @@
+/* Input Row */
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.input-row input[type="text"] {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  font-size: 14px;
+  color: var(--text);
+  outline: none;
+  transition: border-color var(--transition);
+  font-family: inherit;
+}
+
+.input-row input[type="text"]::placeholder {
+  color: var(--text-muted);
+}
+
+.input-row input[type="text"]:focus {
+  border-color: var(--border-hover);
+}
+
+/* Priority Selector (input row) */
+.priority-selector {
+  display: flex;
+  gap: 2px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 3px;
+}
+
+.priority-pill {
+  border: none;
+  background: transparent;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+  font-family: inherit;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.priority-pill[data-priority="high"]:hover,
+.priority-pill[data-priority="high"].selected {
+  background: var(--priority-high-bg);
+  color: var(--priority-high);
+}
+
+.priority-pill[data-priority="medium"]:hover,
+.priority-pill[data-priority="medium"].selected {
+  background: var(--priority-med-bg);
+  color: var(--priority-med);
+}
+
+.priority-pill[data-priority="low"]:hover,
+.priority-pill[data-priority="low"].selected {
+  background: var(--priority-low-bg);
+  color: var(--priority-low);
+}
+
+/* Add Button */
+.btn-add {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.btn-add:hover {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
