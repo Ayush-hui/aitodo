@@ -2,7 +2,9 @@
 node_modules/
 
 # Production build
-dist/
+.next/
+out/
+*.tsbuildinfo
 
 # Environment variables
 .env
@@ -28,13 +30,14 @@ Thumbs.db
 
 # AI assistant configuration
 .claude/
+.agents/
+.codex/
 
 # Coverage
 coverage/
 
 # Cache
 .cache/
-.vite/
 
 # Temporary files
 *.tmp
