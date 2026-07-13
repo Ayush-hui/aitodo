@@ -2,6 +2,12 @@
 
 A dark, priority-driven todo application built with Next.js, React, and TypeScript. The app keeps tasks in localStorage, groups active work by priority, tracks completion progress, and preserves the compact UI from the original single-page experience.
 
+## Preview
+
+<p align="center">
+  <img src="docs/images/todo-preview.png" alt="Todo app preview" width="800" />
+</p>
+
 ## Features
 
 - Add tasks with high, medium, or low priority.
@@ -38,46 +44,36 @@ Styling is intentionally global. The original CSS cascade is preserved by import
 ## Folder Structure
 
 ```text
-app/
-  globals.css
-  layout.tsx
-  page.tsx
-components/
-  icons/
-  Checkbox.tsx
-  EditRow.tsx
-  EmptyState.tsx
-  Filters.tsx
-  Footer.tsx
-  Header.tsx
-  ProgressSection.tsx
-  SectionHeader.tsx
-  SidebarIndicator.tsx
-  TaskActions.tsx
-  TaskItemView.tsx
-  TaskList.tsx
-  TodoApp.tsx
-  TodoAppLoader.tsx
-  TodoInput.tsx
-lib/
-  id.ts
-  model.ts
-  reducer.ts
-  repository.ts
-  selectors.ts
-  storage.ts
-  types.ts
-  useTodos.tsx
-  validation.ts
-styles/
-  base.css
-  layout.css
-  tokens.css
-  components/
-tests/
-  reducer.test.ts
-  repository.test.ts
-  selectors.test.ts
+aitodo/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── icons/
+│   ├── TodoApp.tsx
+│   ├── TodoInput.tsx
+│   ├── TaskList.tsx
+│   └── ...
+├── lib/
+│   ├── reducer.ts
+│   ├── selectors.ts
+│   ├── repository.ts
+│   ├── useTodos.tsx
+│   └── ...
+├── styles/
+│   ├── tokens.css
+│   ├── base.css
+│   ├── layout.css
+│   └── components/
+├── tests/
+│   ├── reducer.test.ts
+│   ├── repository.test.ts
+│   └── selectors.test.ts
+├── next.config.mjs
+├── tsconfig.json
+├── vitest.config.ts
+└── package.json
 ```
 
 ## Installation
